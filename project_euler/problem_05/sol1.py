@@ -6,6 +6,8 @@ to 10 without any remainder.
 What is the smallest positive number that is evenly divisible(divisible with no
 remainder) by all of the numbers from 1 to N?
 """
+
+
 def solution(n):
     """Returns the smallest positive number that is evenly divisible(divisible
     with no remainder) by all of the numbers from 1 to n.
@@ -39,7 +41,7 @@ def solution(n):
     """
     try:
         n = int(n)
-    except (TypeError, ValueError) as e:
+    except (TypeError, ValueError):
         raise TypeError("Parameter n must be int or passive of cast to int.")
     if n <= 0:
         raise ValueError("Parameter n must be greater or equal to one.")

@@ -6,8 +6,9 @@ flake8 : passed
 mypy : passed
 """
 
-from numpy import array, cos, sin, radians, cross  # type: ignore
 from typing import List
+
+from numpy import array, cos, cross, radians, sin  # type: ignore
 
 
 def polar_force(
@@ -54,11 +55,8 @@ def in_static_equilibrium(
 if __name__ == "__main__":
     # Test to check if it works
     forces = array(
-        [
-            polar_force(718.4, 180 - 30),
-            polar_force(879.54, 45),
-            polar_force(100, -90)
-        ])
+        [polar_force(718.4, 180 - 30), polar_force(879.54, 45), polar_force(100, -90)]
+    )
 
     location = array([[0, 0], [0, 0], [0, 0]])
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 By listing the first six prime numbers:
 
@@ -6,6 +5,8 @@ By listing the first six prime numbers:
 
 We can see that the 6th prime is 13. What is the Nth prime number?
 """
+
+
 def isprime(number):
     for i in range(2, int(number ** 0.5) + 1):
         if number % i == 0:
@@ -49,7 +50,7 @@ def solution(n):
     """
     try:
         n = int(n)
-    except (TypeError, ValueError) as e:
+    except (TypeError, ValueError):
         raise TypeError("Parameter n must be int or passive of cast to int.")
     if n <= 0:
         raise ValueError("Parameter n must be greater or equal to one.")

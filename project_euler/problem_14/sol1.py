@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Problem Statement:
 The following iterative sequence is defined for the set of positive integers:
@@ -16,6 +15,8 @@ that all starting numbers finish at 1.
 
 Which starting number, under one million, produces the longest chain?
 """
+
+
 def solution(n):
     """Returns the number under n that generates the longest sequence using the
     formula:
@@ -56,11 +57,5 @@ def solution(n):
 if __name__ == "__main__":
     result = solution(int(input().strip()))
     print(
-        (
-            "Largest Number:",
-            result["largest_number"],
-            "->",
-            result["counter"],
-            "digits",
-        )
+        ("Largest Number:", result["largest_number"], "->", result["counter"], "digits")
     )
